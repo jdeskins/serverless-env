@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip install --upgrade pip awscli boto3
 
-RUN npm install serverless -g
+RUN npm install aws-sdk serverless@1.0.0-rc.1 -g
 
 RUN mkdir /app
 
