@@ -1,16 +1,10 @@
-FROM node:4.3
+FROM node:4.7.3-alpine
 
-ENV REFRESHED_AT 2016-08-19
+ENV REFRESHED_AT 2017-02-20
 
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    python-dev \
-    python-pip \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk add --update bash && rm -rf /var/cache/apk/*
 
-RUN pip install --upgrade pip awscli boto3
-
-RUN npm install aws-sdk serverless@1.5.0 -g
+RUN npm install aws-sdk serverless@1.7.0 -g
 
 RUN mkdir /app
 
