@@ -1,6 +1,6 @@
-FROM node:4.7.3-alpine
+FROM node:6.10-alpine
 
-ENV REFRESHED_AT 2017-02-20
+ENV REFRESHED_AT 2017-04-17
 
 RUN apk add --update bash && rm -rf /var/cache/apk/*
 
