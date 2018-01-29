@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t lifeway/serverless-env .
+docker build -t serverless-env .

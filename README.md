@@ -12,14 +12,15 @@ docker build -t serverless-env .
 ```
 docker run -it -e USER -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_DEFAULT_REGION \
     -v $(PWD):/app/ \
-    lifeway/serverless-env
+    serverless-env
 ```
 
 ## Run specific serverless version
+Container should be previously built.
 ```
 docker run -it -e USER -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_DEFAULT_REGION \
     -v $(PWD):/app/ \
-    lifeway/serverless-env:1.7.0
+    serverless-env:1.26.0
 ```
 
 ## Create New Node.js Service
